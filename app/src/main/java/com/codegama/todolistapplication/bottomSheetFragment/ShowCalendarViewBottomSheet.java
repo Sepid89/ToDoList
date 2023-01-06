@@ -62,7 +62,7 @@ public class ShowCalendarViewBottomSheet extends BottomSheetDialogFragment {
         View contentView = View.inflate(getContext(), R.layout.fragment_calendar_view, null);
         unbinder = ButterKnife.bind(this, contentView);
         dialog.setContentView(contentView);
-        calendarView.setHeaderColor(R.color.colorAccent);
+        calendarView.setHeaderColor(R.color.colorText);
         getSavedTasks();
         back.setOnClickListener(view -> dialog.dismiss());
     }
