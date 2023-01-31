@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="Add a task"
+            android:text="Eine Aufgabe hinzufügen"
             android:textColor="@android:color/black"
             android:textSize="22sp"
             tools:ignore="MissingPrefix" />
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="Fill the details below to add a task into your TODO"
+            android:text="Füllen Sie die unten stehenden Details aus, um eine Aufgabe zu Ihrer TODO hinzuzufügen"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:alpha="0.8"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Task title"
+            android:text="Aufgabentitel"
             tools:ignore="MissingPrefix" />
 
         <EditText
@@ -72,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Task description"
+        android:text="Aufgabenbeschreibung"
         tools:ignore="MissingPrefix" />
 
     <EditText
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Task date"
+        android:text="Aufgabendatum"
         tools:ignore="MissingPrefix" />
 
     <EditText
@@ -114,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Task time"
+        android:text="Aufgabenzeit"
         tools:ignore="MissingPrefix" />
 
     <EditText
@@ -133,7 +133,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/addTask"
-        android:text="Add task"
+        android:text="Aufgabe hinzufügen"
         android:background="@drawable/btn_background"
         android:textColor="@color/colorPrimary"
         android:layout_marginTop="40dp" />

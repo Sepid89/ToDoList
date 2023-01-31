@@ -4,16 +4,16 @@
 
     <item
         android:id="@+id/menuDelete"
-        android:title="Delete"
+        android:title="Löschen"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menuUpdate"
-        android:title="Update"
+        android:title="Aktualisieren"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menuComplete"
-        android:title="Complete"
+        android:title="Fertig"
         app:showAsAction="ifRoom" />
 </menu>

@@ -152,19 +152,19 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
 
     public boolean validateFields() {
         if(addTaskTitle.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter a valid title", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Bitte einen gültigen Titel eingeben", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(addTaskDescription.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter a valid description", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Bitte eine gültige Beschreibung eingeben", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(taskDate.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter date", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Bitte das Datum eingeben", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(taskTime.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter time", Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, "Bitte die Uhrzeit eingeben", Toast.LENGTH_SHORT).show();
             return false;
         }
         else {
@@ -210,7 +210,7 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
                     createAnAlarm();
                 }
                 setRefreshListener.refresh();
-                Toast.makeText(getActivity(), "Your event is been added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Ihr Event wurde hinzugefügt", Toast.LENGTH_SHORT).show();
                 dismiss();
 
             }

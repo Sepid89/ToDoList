@@ -59,7 +59,7 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/btn_background"
             android:textColor="@color/colorPrimary"
-            android:text="Done"
+            android:text="Erledigt"
             android:layout_marginBottom="30dp"
             android:textAllCaps="false"/>
 
