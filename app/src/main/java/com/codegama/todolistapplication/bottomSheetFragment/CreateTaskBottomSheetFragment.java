@@ -38,6 +38,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.zubair.alarmmanager.builder.AlarmBuilder;
 import com.zubair.alarmmanager.enums.AlarmType;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -61,8 +62,6 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
     EditText taskDate;
     @BindView(R.id.taskTime)
     EditText taskTime;
-    @BindView(R.id.taskEvent)
-    EditText taskEvent;
     @BindView(R.id.addTask)
     Button addTask;
     int taskId;
@@ -99,7 +98,7 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    @SuppressLint({"RestrictedApi", "ClickableViewAccessibility"})
+    @SuppressLint({"RestrictedApi", "ClickableViewAccessibility", "SuspiciousIndentation"})
     @Override
     public void setupDialog(Dialog dialog, int style) {
         super.setupDialog(dialog, style);
@@ -168,10 +167,6 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
             Toast.makeText(activity, "Please enter time", Toast.LENGTH_SHORT).show();
             return false;
         }
-        else if(taskEvent.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(activity, "Please enter an event", Toast.LENGTH_SHORT).show();
-            return false;
-        }
         else {
             return true;
         }
@@ -192,7 +187,6 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
                 createTask.setTaskDescrption(addTaskDescription.getText().toString());
                 createTask.setDate(taskDate.getText().toString());
                 createTask.setLastAlarm(taskTime.getText().toString());
-                createTask.setEvent(taskEvent.getText().toString());
 
                 if (!isEdit)
                     DatabaseClient.getInstance(getActivity()).getAppDatabase()
@@ -204,8 +198,7 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
                             .updateAnExistingRow(taskId, addTaskTitle.getText().toString(),
                                     addTaskDescription.getText().toString(),
                                     taskDate.getText().toString(),
-                                    taskTime.getText().toString(),
-                                    taskEvent.getText().toString());
+                                    taskTime.getText().toString());
 
                 return null;
             }
@@ -304,7 +297,6 @@ public class CreateTaskBottomSheetFragment extends BottomSheetDialogFragment {
         addTaskDescription.setText(task.getTaskDescrption());
         taskDate.setText(task.getDate());
         taskTime.setText(task.getLastAlarm());
-        taskEvent.setText(task.getEvent());
     }
 
     public interface setRefreshListener {

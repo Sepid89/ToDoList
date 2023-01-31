@@ -37,8 +37,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     private MainActivity context;
     private LayoutInflater inflater;
     private List<Task> taskList;
-    public SimpleDateFormat dateFormat = new SimpleDateFormat("EE dd MMM yyyy", Locale.US);
-    public SimpleDateFormat inputDateFormat = new SimpleDateFormat("dd-M-yyyy", Locale.US);
+    public SimpleDateFormat dateFormat = new SimpleDateFormat("EE dd MMM yyyy", Locale.GERMAN);
+    public SimpleDateFormat inputDateFormat = new SimpleDateFormat("dd-M-yyyy", Locale.GERMAN);
     Date date = null;
     String outputDateString = null;
     CreateTaskBottomSheetFragment.setRefreshListener setRefreshListener;

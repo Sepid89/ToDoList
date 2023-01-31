@@ -27,8 +27,7 @@ public interface OnDataBaseAction {
     Task selectDataFromAnId(int taskId);
 
     @Query("UPDATE Task SET taskTitle = :taskTitle, taskDescription = :taskDescription, date = :taskDate, " +
-            "lastAlarm = :taskTime, event = :taskEvent WHERE taskId = :taskId")
-    void updateAnExistingRow(int taskId, String taskTitle, String taskDescription , String taskDate, String taskTime,
-                            String taskEvent);
+            "lastAlarm = :taskTime WHERE taskId = :taskId")
+    void updateAnExistingRow(int taskId, String taskTitle, String taskDescription , String taskDate, String taskTime);
 
 }
